@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 public class Aims {
 
@@ -13,7 +18,7 @@ public class Aims {
 		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
 		anOrder.addDigitalVideoDisc(dvd2);
 		
-		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", null, 0, 18.99f);
 		anOrder.addDigitalVideoDisc(dvd3);
 		
 		//Print total cost of the items in the cart
