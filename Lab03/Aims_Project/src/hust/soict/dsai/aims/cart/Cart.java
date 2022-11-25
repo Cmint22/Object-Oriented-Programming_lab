@@ -1,8 +1,11 @@
+package hust.soict.dsai.aims.cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Cart {
+	
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-	private int qtyOrdered= 0;
+	private int qtyOrdered = 0;
 	private float ttCost;
 	
 	public int getQtyOrdered() {
@@ -23,7 +26,7 @@ public class Cart {
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		if(qtyOrdered > 0) {
 			for(int i = 0; i < qtyOrdered; i++) {
-				if(itemsOrdered[i] == disc) {
+				if(itemsOrdered[i] == disc) { //NEU DUNG == THI SO SANH XEM 2 CAI DAY CO CUNG THAM CHIEU 1 DOI TUONG KHONG!!
 					for(int j = i; j < qtyOrdered - 1; j++) {
 						itemsOrdered[j] = itemsOrdered[j+1];
 					}
@@ -67,6 +70,20 @@ public class Cart {
 		else System.out.println("The order is almost full.");
 	}
 	
+	public void printOrdered() {
+		System.out.println("********************************CART********************************");
+		System.out.print("Ordered Items: \n");
+		
+		for(int i = 0; i < qtyOrdered; i++) {
+			System.out.printf("%d. DVD - " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory() + " - " + itemsOrdered[i].getDirector() + " - %d: %.2f $ \n", i, itemsOrdered[i].getLength(), itemsOrdered[i].getCost());
+		}
+		System.out.printf("Total cost: %.2f \n", totalCost());
+		System.out.println("*********************************************************************");
+	}
+	public void print() {
+		// TODO Auto-generated method stub
 	
+	}
 }
+
 

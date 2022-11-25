@@ -1,3 +1,4 @@
+package hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
 	
@@ -45,7 +46,7 @@ public class DigitalVideoDisc {
 		this.title = title;
 	}
 
-	public DigitalVideoDisc(String title, String category) {
+	public DigitalVideoDisc(String title, String category, float cost) {
 		super();
 		this.title = title;
 		this.category = category;
@@ -69,4 +70,16 @@ public class DigitalVideoDisc {
 	public void swap(DigitalVideoDisc a, DigitalVideoDisc b) {
 		
 	}
+	
+	public static int getNbDigitalVideoDiscs() {
+		return nbDigitalVideoDiscs;
+	}
+	public static void setNbDigitalVideoDiscs(int nbDigitalVideoDiscs) {
+		DigitalVideoDisc.nbDigitalVideoDiscs = nbDigitalVideoDiscs;
+	}
+
+	private static int nbDigitalVideoDiscs = 0;
+	
 }
+
+
