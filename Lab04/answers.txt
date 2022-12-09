@@ -1,0 +1,19 @@
+Question: Which classes are aggregates of other classes? Checking all constructors of whole classes if they initialize for their parts?
+- Track is the aggregate of CompactDisc.
+Question: If the passing object is not an instance of Media, what happens?
+- It will raise an error if the passing object is not a descendant of Media.
+Question: What class should implement the Comparable interface?
+- Class Media.
+Question: In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
+- If we want to order medias by title then cost :
+	public int compareTo(Media o1, Media o2) {
+		int byCost = (int) (o1.getCost() - o2.getCost());
+		int byTitle = o1.getTitle().compareTo(o2.getTitle());
+		return (byTitle == 0) ? byCost : byTitle;
+	}
+If we want to order medias by cost then title, simply do the similar except for the return statement: return (byCost == 0) ? byTitle : buCost;
+Question: Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+- We can not because comparable does not expplicitly support.
+Question: Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+- Create disc, book implement comparable. Apply method overloading approach to handle comparion between DVD, CD and book.
+
