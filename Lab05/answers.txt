@@ -1,0 +1,2 @@
+Question: The Aims class must be updated to handle any exceptions generated when the play() methods are called. What happens when you don’t update for them to catch?
+Answer: have bug and we might be fix it
